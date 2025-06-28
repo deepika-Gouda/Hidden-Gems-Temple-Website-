@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanadurga Temple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada&family=Tangerine&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff8f8, #fce3f3);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 30px 10px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #f3f3f3;
+    }
+    nav {
+      background: linear-gradient(to right, #ec6ead, #3494e6);
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 4px solid #9c27b0;
+    }
+    nav button, #lang-toggle {
+      background-color: white;
+      border: 2px solid #d500f9;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #6a1b9a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    nav button:hover, #lang-toggle:hover {
+      background: #fce4ec;
+      color: #d81b60;
+      transform: scale(1.05);
+    }
+    .temple-img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .content {
+      width: 90%;
+      max-width: 750px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fffafa;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+    .content.active {
+      display: block;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    #lang-toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="lang-en">
+    <h1>Shri Vanadurga Tatha Jalanthargatha Naga Sanidhya Temple</h1>
+    <nav>
+      <button onclick="showSection('location')">📍 Location</button>
+      <button onclick="showSection('deity')">🙏 Deity</button>
+      <button onclick="showSection('history')">📖 History</button>
+      <button onclick="showSection('daily')">🌄 Daily Rituals</button>
+      <button onclick="showSection('festival')">🎉 Festival</button>
+      <button onclick="showSection('images')">🖼️ Images</button>
+      <button id="lang-toggle" onclick="toggleLanguage()">ಕನ್ನಡ</button>
+    </nav>
+    <img src="vanadurga.jpeg" class="temple-img" id="mainImage">
+    <div id="location" class="content">
+      <h2>📍 Location</h2>
+      <p>Near Modankapu, Denthadka, BC Road, Bantwal Taluk, Dakshina Kannada, Karnataka – 574219<br>~2–3 km from BC Road on NH-48 (Mangalore–Bangalore Highway)</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.3461534348585!2d75.01844207454529!3d12.885449216762302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4a651ed710a81%3A0x8e9aefe5860974d2!2sShri%20Vanadurga%20Tatha%20Jalanthargatha%20Naga%20Sanidhya%20Temple!5e0!3m2!1sen!2sin!4v1751106685458!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="deity" class="content">
+      <h2>🙏 Deity</h2>
+      <p>Goddess Vanadurga and Jalanthargatha Naga are the primary deities. Lord Ganapathi and Lord Shastara are also worshipped.</p>
+    </div>
+    <div id="history" class="content">
+      <h2>📖 History</h2>
+      <p>The temple was rediscovered in 2001 and restored under the guidance of Sri Raghaveshwara Bharati Swamiji of Ramachandrapura Math. A Brahmakalasha Mahotsava was held in 2005.</p>
+    </div>
+    <div id="daily" class="content">
+      <h2>🌄 Daily Rituals</h2>
+      <p>
+        - Two poojas daily (morning and evening)<br>
+        - Free lunch prasadam (Annasantharpana) served every afternoon<br>
+        - Temple and Goshala maintained by two staff members<br>
+        - Over 20 cows housed in the temple’s Goshala
+      </p>
+    </div>
+    <div id="festival" class="content">
+      <h2>🎉 Festival</h2>
+      <p>The temple celebrates an annual festival during Karthika Masa with special rituals and community events.</p>
+    </div>
+    <div id="images" class="content">
+      <h2>🖼️ Images</h2>
+      <img src="vanadurga1.jpg" class="temple-img">
+      <img src="vanadurga2.jpg" class="temple-img">
+      <img src="vanadurga3.webp" class="temple-img">
+      <img src="vanadurgagoshala.jpg" class="temple-img">
+    </div>
+  </div>
+
+  <div id="lang-kn" style="display:none">
+    <h1>ಶ್ರೀ ವನದುರ್ಗಾ ತಥಾ ಜಲಾಂತರಗತ ನಾಗ ಸಾನಿಧ್ಯ ದೇವಾಲಯ</h1>
+    <nav>
+      <button onclick="showSection('location-kn')">📍 ಸ್ಥಳ</button>
+      <button onclick="showSection('deity-kn')">🙏 ದೇವತೆ</button>
+      <button onclick="showSection('history-kn')">📖 ಇತಿಹಾಸ</button>
+      <button onclick="showSection('daily-kn')">🌄 ದಿನಚರಿ</button>
+      <button onclick="showSection('festival-kn')">🎉 ಹಬ್ಬ</button>
+      <button onclick="showSection('images-kn')">🖼️ ಚಿತ್ರಗಳು</button>
+      <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+    </nav>
+    <img src="vanadurga.jpeg" class="temple-img" id="mainImage-kn">
+    <div id="location-kn" class="content">
+      <h2>📍 ಸ್ಥಳ</h2>
+      <p>ಮೋಡನಕಾಪು ಸಮೀಪ, ಡೆಂತದ್ಕ, ಬಿಸಿ ರಸ್ತೆ, ಬಂಟ್ವಾಳ ತಾಲ್ಲೂಕು, ದ.ಕ. ಜಿಲ್ಲೆ – 574219<br>ಬಿಸಿ ರಸ್ತೆಯಿಂದ ~2–3 ಕಿಮೀ ದೂರ, ನ.ಹೆ.48 (ಮಂಗಳೂರು–ಬೆಂಗಳೂರು ಹೆದ್ದಾರಿ)</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.3461534348585!2d75.01844207454529!3d12.885449216762302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4a651ed710a81%3A0x8e9aefe5860974d2!2sShri%20Vanadurga%20Tatha%20Jalanthargatha%20Naga%20Sanidhya%20Temple!5e0!3m2!1sen!2sin!4v1751106685458!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="deity-kn" class="content">
+      <h2>🙏 ದೇವತೆ</h2>
+      <p>ಇಲ್ಲಿ ವನದುರ್ಗಾ ದೇವಿ ಮತ್ತು ಜಲಾಂತರಗತ ನಾಗ ದೇವತೆ ಪ್ರಾಥಮಿಕ ಆರಾಧ್ಯರು. ಗಣಪತಿ ಮತ್ತು ಶಸ್ತಾರ ದೇವರಿಗೂ ಪೂಜೆ ನಡೆಯುತ್ತದೆ.</p>
+    </div>
+    <div id="history-kn" class="content">
+      <h2>📖 ಇತಿಹಾಸ</h2>
+      <p>ಈ ದೇವಸ್ಥಾನವನ್ನು 2001 ರಲ್ಲಿ ಪುನಃ ಕಂಡುಹಿಡಿದು, ರಾಮಚಂದ್ರಪುರ ಮಠದ ಶ್ರೀ ರಾಘವೇಶ್ವರ ಭಾರತೀ ಸ್ವಾಮೀಜಿಯವರ ನೇತೃತ್ವದಲ್ಲಿ ಪುನರ್ ನಿರ್ಮಿಸಲಾಯಿತು. 2005 ರಲ್ಲಿ ಬ್ರಹ್ಮಕಲಶ ಮಹೋತ್ಸವ ನಡೆಯಿತು.</p>
+    </div>
+    <div id="daily-kn" class="content">
+      <h2>🌄 ದಿನಚರಿ</h2>
+      <p>
+        - ಪ್ರತಿ ದಿನ ಬೆಳಗ್ಗೆ ಮತ್ತು ಸಂಜೆ ಎರಡು ಬಾರಿ ಪೂಜೆ<br>
+        - ಮಧ್ಯಾಹ್ನ ಅನ್ನಸಂತರ್ಪಣೆ (ಉಚಿತ ಪ್ರಸಾದ ವಿತರಣಾ)<br>
+        - ದೇವಸ್ಥಾನ ಮತ್ತು ಗೋಶಾಲೆಯ ನಿರ್ವಹಣೆಗಾಗಿ ಇಬ್ಬರು ಸೇವಕರು ನೇಮಿಸಲಾಗಿದೆ<br>
+        - 20 ಕ್ಕೂ ಹೆಚ್ಚು ಗೋಮಾತೆಗಳನ್ನು ಹೊಂದಿರುವ ಗೋಶಾಲೆ
+      </p>
+    </div>
+    <div id="festival-kn" class="content">
+      <h2>🎉 ಹಬ್ಬ</h2>
+      <p>ಈ ದೇವಾಲಯದಲ್ಲಿ ಪ್ರತಿವರ್ಷ ಕಾರ್ತಿಕ ಮಾಸದಲ್ಲಿ ವಿಶೇಷ ಪೂಜೆಗಳು ಮತ್ತು ಹಬ್ಬದ ಕಾರ್ಯಕ್ರಮಗಳು ನಡೆಯುತ್ತವೆ.</p>
+    </div>
+    <div id="images-kn" class="content">
+      <h2>🖼️ ಚಿತ್ರಗಳು</h2>
+      <img src="vanadurga1.jpg" class="temple-img">
+      <img src="vanadurga2.jpg" class="temple-img">
+      <img src="vanadurga3.webp" class="temple-img">
+      <img src="vanadurgagoshala.jpg" class="temple-img">
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+      document.getElementById("mainImage")?.style.setProperty("display", "none");
+      document.getElementById("mainImage-kn")?.style.setProperty("display", "none");
+      document.getElementById(id)?.classList.add('active');
+    }
+    function toggleLanguage() {
+      const enDiv = document.getElementById("lang-en");
+      const knDiv = document.getElementById("lang-kn");
+      const btns = document.querySelectorAll("#lang-toggle");
+      if (enDiv.style.display !== "none") {
+        enDiv.style.display = "none";
+        knDiv.style.display = "block";
+        btns.forEach(btn => btn.textContent = "English");
+      } else {
+        enDiv.style.display = "block";
+        knDiv.style.display = "none";
+        btns.forEach(btn => btn.textContent = "ಕನ್ನಡ");
+      }
+      document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+      document.getElementById("mainImage")?.style.setProperty("display", "block");
+      document.getElementById("mainImage-kn")?.style.setProperty("display", "block");
+    }
+  </script>
+</body>
+</html>

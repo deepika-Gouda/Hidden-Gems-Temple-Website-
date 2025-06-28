@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rakteshwari Temple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada&family=Tangerine&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff8f8, #fce3f3);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 30px 10px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #f3f3f3;
+    }
+
+    nav {
+      background: linear-gradient(to right, #ec6ead, #3494e6);
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 4px solid #9c27b0;
+    }
+
+    nav button, #lang-toggle {
+      background-color: white;
+      border: 2px solid #d500f9;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #6a1b9a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    nav button:hover, #lang-toggle:hover {
+      background: #fce4ec;
+      color: #d81b60;
+      transform: scale(1.05);
+    }
+
+    .temple-img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .content {
+      width: 90%;
+      max-width: 750px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fffafa;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    #lang-toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="lang-en">
+  <h1>Shri Rakteshwari Devi Temple</h1>
+  <nav>
+    <button onclick="showSection('location')"> 📍 Location</button>
+    <button onclick="showSection('deity')"> 🙏 Deity</button>
+    <button onclick="showSection('history')"> 📖 History</button>
+    <button onclick="showSection('rituals')"> 🌄 Daily Rituals</button>
+    <button onclick="showSection('festivals')">🎉 Festivals</button>
+    <button onclick="showSection('images')">🖼️ Images</button>
+    <button id="lang-toggle" onclick="toggleLanguage()">ಕನ್ನಡ</button>
+  </nav>
+
+  <img src="rakteshwari.jpg" alt="Rakteshwari Temple" class="temple-img" id="mainImage">
+
+  <div id="location" class="content">
+    <h2>📍 Location</h2>
+    <p>The temple is located in Bantwal taluk, near B C Road on NH‑48 in Dakshina Kannada, Karnataka, approximately 38 km northeast of Mangalore.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.412624847665!2d75.02736487454528!3d12.881168016855566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4a659657237c5%3A0x84ab82c35efda348!2sRakhteshwari%20Temple%2C%20B.C%20Road%2C%20Bantwal%2C%20Karnataka%20574219!5e0!3m2!1sen!2sin!4v1751106768226!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div id="deity" class="content">
+    <h2>🙏 Deity</h2>
+    <p>Goddess Rakteshwari—a fierce form of the Divine Mother, identified with Adi Parashakti or Durga Parameshwari. She is revered as both a protective and warrior goddess in Tulu Nadu.</p>
+  </div>
+
+  <div id="history" class="content">
+    <h2>📖 History</h2>
+    <p><strong>Tulu Nadu Tradition:</strong> Worship of Rakteshwari is deeply rooted in Parashuramakshetra.<br>
+       <strong>Folk & Tribal Roots:</strong> Her worship includes fierce rituals, sometimes involving meat or wine offerings.<br>
+       <strong>Mythological Ties:</strong> Legends mention her battle with demons like Andhakasura.<br>
+       <strong>Popular Events:</strong> Annual Shobhayatre processions with Yakshagana, tiger dances, music, and more.</p>
+  </div>
+
+  <div id="rituals" class="content">
+    <h2>🔔 Daily Rituals</h2>
+    <p>Two-time pooja daily: morning and evening.<br>
+       Free afternoon annasantarpana (meals for devotees).</p>
+  </div>
+
+  <div id="festivals" class="content">
+    <h2>🎉 Festivals</h2>
+    <p>Special celebrations during Navaratri and Karthika Masa.<br>
+       Traditional cultural events like Yakshagana and Hulivesha are held during annual jathre.</p>
+  </div>
+
+  <div id="images" class="content">
+    <h2>🖼️ Images</h2>
+    <img src="rakteshwari1.jpg" alt="Rakteshwari Temple" class="temple-img">
+    <img src="rakteshwari2.jpg" alt="Rakteshwari Temple" class="temple-img">
+  </div>
+</div>
+
+<div id="lang-kn" style="display: none;">
+  <h1>ಶ್ರೀ ರಕ್ತೇಶ್ವರಿ ದೇವಿ ದೇವಸ್ಥಾನ</h1>
+  <nav>
+    <button onclick="showSection('location-kn')">📍 ಸ್ಥಳ</button>
+    <button onclick="showSection('deity-kn')">🙏 ದೇವತೆ</button>
+    <button onclick="showSection('history-kn')"> 📖 ಇತಿಹಾಸ</button>
+    <button onclick="showSection('rituals-kn')"> 🌄 ದಿನಚರಿ</button>
+    <button onclick="showSection('festivals-kn')">🎉 ಹಬ್ಬಗಳು</button>
+    <button onclick="showSection('images-kn')">🖼️ ಚಿತ್ರಗಳು</button>
+    <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+  </nav>
+
+  <img src="rakteshwari.jpg" alt="Rakteshwari Temple" class="temple-img" id="mainImage-kn">
+
+  <div id="location-kn" class="content">
+    <h2>📍 ಸ್ಥಳ</h2>
+    <p>ದ.ಕ. ಜಿಲ್ಲೆಯ ಬಂಟ್ವಾಳ ತಾಲ್ಲೂಕಿನ ಬಿಸಿ ರಸ್ತೆ ಸಮೀಪ ಎನ್‌ಎಚ್‑48ರಲ್ಲಿ, ಮಂಗಳೂರಿನಿಂದ ಸುಮಾರು 38 ಕಿ.ಮೀ ದೂರದಲ್ಲಿದೆ.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.412624847665!2d75.02736487454528!3d12.881168016855566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4a659657237c5%3A0x84ab82c35efda348!2sRakhteshwari%20Temple%2C%20B.C%20Road%2C%20Bantwal%2C%20Karnataka%20574219!5e0!3m2!1sen!2sin!4v1751106768226!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div id="deity-kn" class="content">
+    <h2>🙏 ದೇವತೆ</h2>
+    <p>ರಕ್ತೇಶ್ವರಿ ದೇವಿ - ಪರಮಶಕ್ತಿ ಅಥವಾ ದುರ್ಗಾ ಪರಮೇಶ್ವರಿಯ ಕ್ರೂರ ರೂಪ. ತುದುನಾಡಿನಲ್ಲಿ ರಕ್ಷಣಾ ದೇವತೆಯಾಗಿ ಪೂಜಿಸಲಾಗುತ್ತದೆ.</p>
+  </div>
+
+  <div id="history-kn" class="content">
+    <h2>📖 ಇತಿಹಾಸ</h2>
+    <p><strong>ತುಳು ನಾಡು ಪರಂಪರೆ:</strong> ಪರಶುರಾಮನು ಪುನಃ ಪಡೆದ ಭೂಮಿಯಲ್ಲಿ ಗಾಢವಾಗಿ ನೆಲೆಸಿರುವ ಪೂಜೆ.<br>
+       <strong>ಜನಪದ ಶಕ್ತಿ:</strong> ಮಾಂಸ, ಮದ್ಯ ಇತ್ಯಾದಿಯ ನೈವೇದ್ಯದ ಮೂಲಕ ತೀವ್ರ ಪೂಜೆಗಳು.<br>
+       <strong>ಪುರಾಣ ಕಥೆಗಳು:</strong> ಅಂಧಕಾಸುರನನ್ನು ಸಂಹಾರ ಮಾಡಿದ ದೇವಿಯ ಕತೆ.<br>
+       <strong>ಹಬ್ಬಗಳು:</strong> ಶೋಭಾಯಾತ್ರೆ, ಹುಲಿ ನೃತ್ಯಗಳು, ಯಕ್ಷಗಾನ ಮೊದಲಾದವು.</p>
+  </div>
+
+  <div id="rituals-kn" class="content">
+    <h2>🔔 ದಿನಚರಿ ಪೂಜೆ</h2>
+    <p>ಬೆಳಿಗ್ಗೆ ಮತ್ತು ಸಂಜೆ ಎರಡು ಬಾರಿ ಪೂಜೆ ನಡೆಯುತ್ತದೆ.<br>
+       ಮಧ್ಯಾಹ್ನ ಭಕ್ತರಿಗೆ ಉಚಿತ ಅನ್ನದಾನ (ಅನ್ನಸಂತರ್ಪಣೆ).</p>
+  </div>
+
+  <div id="festivals-kn" class="content">
+    <h2>🎉 ಹಬ್ಬಗಳು</h2>
+    <p>ನವರಾತ್ರಿ ಮತ್ತು ಕಾರ್ತಿಕ ಮಾಸದಲ್ಲಿ ವಿಶೇಷ ಆಚರಣೆಗಳು.<br>
+       ವಾರ್ಷಿಕ ಜಾತ್ರೆಯಲ್ಲಿ ಯಕ್ಷಗಾನ, ಹುಲಿ ವೇಷ ಮೊದಲಾದ ಜನಪದ ಪ್ರದರ್ಶನಗಳು.</p>
+  </div>
+
+  <div id="images-kn" class="content">
+    <h2>🖼️ ಚಿತ್ರಗಳು</h2>
+    <img src="rakteshwari1.jpg" alt="Rakteshwari Temple" class="temple-img">
+    <img src="rakteshwari2.jpg" alt="Rakteshwari Temple" class="temple-img">
+  </div>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.getElementById("mainImage")?.style.setProperty("display", "none");
+    document.getElementById("mainImage-kn")?.style.setProperty("display", "none");
+    document.getElementById(id)?.classList.add('active');
+  }
+
+  function toggleLanguage() {
+    const enDiv = document.getElementById("lang-en");
+    const knDiv = document.getElementById("lang-kn");
+    const btns = document.querySelectorAll("#lang-toggle");
+
+    if (enDiv.style.display !== "none") {
+      enDiv.style.display = "none";
+      knDiv.style.display = "block";
+      btns.forEach(btn => btn.textContent = "English");
+    } else {
+      enDiv.style.display = "block";
+      knDiv.style.display = "none";
+      btns.forEach(btn => btn.textContent = "ಕನ್ನಡ");
+    }
+
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.getElementById("mainImage")?.style.setProperty("display", "block");
+    document.getElementById("mainImage-kn")?.style.setProperty("display", "block");
+  }
+</script>
+
+</body>
+</html>
