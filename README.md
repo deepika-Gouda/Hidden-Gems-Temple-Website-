@@ -22,4 +22,5 @@ The site helps visitors explore temple details, history, and locations with an e
 ---
 
 ## website link
+https://deepika-gouda.github.io/Hidden-Gems-Temple-Website-/
 
