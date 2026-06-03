@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kateel Temple</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fef6e4, #fceaff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background: linear-gradient(to right, #ec6ead, #3494e6);
+      color: white;
+      padding: 15px;
+      margin: 0;
+    }
+
+    nav {
+      background: #ffd6f6;
+      padding: 10px;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 8px 15px;
+      border: none;
+      background: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    img {
+      width: 80%;
+      max-width: 500px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Kateel Durga Parameshwari Temple</h1>
+
+<nav>
+  <button onclick="showSection('location')">Location</button>
+  <button onclick="showSection('deity')">Deity</button>
+  <button onclick="showSection('history')">History</button>
+  <button onclick="showSection('images')">Images</button>
+</nav>
+
+<img src="kateel.jpg" id="mainImage">
+
+<div id="location" class="content">
+  <h2>📍 Location</h2>
+  <p>Kateel is located near Mangalore in Karnataka, on the banks of the Nandini River.</p>
+  <iframe src="https://www.google.com/maps?q=Kateel+Temple&output=embed"></iframe>
+</div>
+
+<div id="deity" class="content">
+  <h2>🙏 Deity</h2>
+  <p>Goddess Durga Parameshwari is worshipped here with great devotion.</p>
+</div>
+
+<div id="history" class="content">
+  <h2>📖 History</h2>
+  <p>The temple has ancient roots and is one of the most famous temples in coastal Karnataka.</p>
+</div>
+
+<div id="images" class="content">
+  <h2>🖼️ Images</h2>
+  <img src="kateel.jpg">
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.getElementById("mainImage").style.display = "none";
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
