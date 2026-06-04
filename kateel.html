@@ -72,6 +72,7 @@
     <button onclick="showSection('rituals')"> 🌄 Daily Rituals</button>
     <button onclick="showSection('festivals')">🎉 Festivals</button>
     <button onclick="showSection('images')">🖼️ Images</button>
+   <button onclick="showSection('features')">🌟 Special Features</button>
 </nav>
 
 <img src="kateel.jpg" id="mainImage">
@@ -120,6 +121,16 @@ The name “Kateel” comes from:<br>
   <img src="kateel.jpg">
 </div>
 
+  <div id="features" class="content">
+  <h2>🌟 Special Features</h2>
+ <p>Temple is surrounded by flowing river on all sides<br>
+Very peaceful and scenic environment
+Famous for:<br>
+Spiritual healing 🙏<br>
+Cultural performances 🎭<br>
+Daily food service (Annadana) 🍛</p>
+</div>
+  
 <script>
 function showSection(id) {
   document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
